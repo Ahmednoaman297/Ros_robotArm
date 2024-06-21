@@ -1,0 +1,15 @@
+# Controller to control robot arm joints
+robot_arm_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints: [First_Joint,Second_Joint,Third_Joint,Fourth_Joint]
+
+# Controller to control end effector joints
+hand_ee_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints: [Fifth_Joint,Sixth_Joint]
+
+# Controller to continuously publish joint states/positions
+joint_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+

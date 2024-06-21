@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="felasha">
+  <link name="world"/>
+<joint name="base_joint" type="fixed">
+<parent link="world"/>
+<child link="base_link"/>
+<origin rpy="0 0 0" xyz="0.0 0.0 0.17"/>
+</joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.041976 -8.4291E-06 0.14161"
+        rpy="0 0 0" />
+      <mass
+        value="18.634" />
+      <inertia
+        ixx="0.37088"
+        ixy="2.8935E-05"
+        ixz="-0.0041656"
+        iyy="0.45302"
+        iyz="-2.0378E-05"
+        izz="0.44342" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="First_Link">
+    <inertial>
+      <origin
+        xyz="-1.31813357462483E-05 3.46742352729219E-07 0.1068805850404"
+        rpy="0 0 0" />
+      <mass
+        value="12.4999676833069" />
+      <inertia
+        ixx="0.14193852263874"
+        ixy="-0.00180311077842753"
+        ixz="-3.02044466257135E-06"
+        iyy="0.162392942733193"
+        iyz="2.74863624754489E-07"
+        izz="0.144010403422395" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/First_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/First_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.31"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="First_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="Second_Link">
+    <inertial>
+      <origin
+        xyz="0.00465108682528854 0.00870346560105971 0.166939388608822"
+        rpy="0 0 0" />
+      <mass
+        value="8.89241245993285" />
+      <inertia
+        ixx="0.165798170544076"
+        ixy="0.000501866001391228"
+        ixz="-0.0112713402855934"
+        iyy="0.159708152905039"
+        iyz="-0.000758235186890012"
+        izz="0.0322509919061271" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Second_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Second_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Second_Joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.225"
+      rpy="0.016533 -0.18683 -0.001549" />
+    <parent
+      link="First_Link" />
+    <child
+      link="Second_Link" />
+    <axis
+      xyz="0.087126 -0.9962 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="Third_Link">
+    <inertial>
+      <origin
+        xyz="-0.148165497417748 -0.00241823610930427 0.0395601108813228"
+        rpy="0 0 0" />
+      <mass
+        value="6.27640755792702" />
+      <inertia
+        ixx="0.0423655161809186"
+        ixy="-0.00269658090097032"
+        ixz="0.0140045130689235"
+        iyy="0.0729623918811651"
+        iyz="0.00122485603856704"
+        izz="0.096506878708921" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Third_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Third_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Third_Joint"
+    type="revolute">
+    <origin
+      xyz="0.023245 0.002033 0.36523"
+      rpy="-0.0011967 0.013682 0" />
+    <parent
+      link="Second_Link" />
+    <child
+      link="Third_Link" />
+    <axis
+      xyz="0.087126 -0.9962 0" />
+    <limit
+       lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="Fourth_Link">
+    <inertial>
+      <origin
+        xyz="-0.127513391694562 -0.0112822542524118 0.0280542890126235"
+        rpy="0 0 0" />
+      <mass
+        value="1.13882879879703" />
+      <inertia
+        ixx="0.00312161267783901"
+        ixy="-0.000673121364217621"
+        ixz="0.000838811575483148"
+        iyy="0.0052399891583825"
+        iyz="-0.000525201520217494"
+        izz="0.00474994359312524" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Fourth_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Fourth_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fourth_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.35428 -0.020445 0.095914"
+      rpy="1.4754 0.33549 -0.19392" />
+    <parent
+      link="Third_Link" />
+    <child
+      link="Fourth_Link" />
+    <axis
+      xyz="0.96166 0.084106 -0.26102" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="Fifth_Link">
+    <inertial>
+      <origin
+        xyz="-0.0233506596206562 -0.00980210470133625 0.00984326433097515"
+        rpy="0 0 0" />
+      <mass
+        value="0.564787645696191" />
+      <inertia
+        ixx="0.00043949728616338"
+        ixy="1.27371193807324E-05"
+        ixz="1.64036977487468E-05"
+        iyy="0.000416758421899577"
+        iyz="7.29257822549807E-06"
+        izz="0.000502986867789442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Fifth_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Fifth_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Fifth_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.22122 -0.019348 0.060047"
+      rpy="-0.49273 0.13579 0.34494" />
+    <parent
+      link="Fourth_Link" />
+    <child
+      link="Fifth_Link" />
+    <axis
+      xyz="0.25118 0.11192 0.96145" />
+    <limit
+       lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+  <link
+    name="Sixth_Link">
+    <inertial>
+      <origin
+        xyz="-0.0223396541850425 -0.00259219057195792 0.00613794419197289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0398589567924206" />
+      <inertia
+        ixx="1.45143047831818E-05"
+        ixy="6.59808992109768E-07"
+        ixz="-1.56233527532361E-06"
+        iyy="8.90459241940986E-06"
+        iyz="-1.81286189006603E-07"
+        izz="9.25729152635139E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Sixth_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://felasha/meshes/Sixth_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Sixth_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.0624 -0.027093 0.022056"
+      rpy="1.2415 0.3119 0.10866" />
+    <parent
+      link="Fifth_Link" />
+    <child
+      link="Sixth_Link" />
+    <axis
+      xyz="0.95829 0.1112 -0.26329" />
+    <limit
+       lower="-3.14"
+      upper="3.14"
+      effort="300"
+      velocity="3" />
+  </joint>
+    <transmission name="First_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="First_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="First_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="Second_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Second_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="Second_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="Third_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Third_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="Third_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+<transmission name="Fourth_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Fourth_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="Fourth_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="Fifth_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Fifth_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="Fifth_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+<transmission name="Sixth_Link_trans">
+<type>transmission_interface/SimpleTransmission</type>
+<joint name="Sixth_Joint">
+<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+</joint>
+<actuator name="Sixth_Link_motor"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+<mechanicalReduction>1</mechanicalReduction>
+</actuator>
+</transmission>
+
+
+
+<gazebo>
+<plugin name="control"
+filename="libgazebo_ros_control.so">
+<robotNamespace>/</robotNamespace>
+</plugin>
+</gazebo>
+<gazebo reference="First_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="Second_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="Third_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="Fourth_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="Fifth_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="Sixth_Link">
+<selfCollide>true</selfCollide>
+</gazebo>
+</robot>
